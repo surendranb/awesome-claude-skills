@@ -51,19 +51,19 @@ Output the final report using the following markdown structure:
 
 ## 1. Context Curation (`llms.txt`)
 - **Status:** [Found / Not Found]
-- **Why it matters:** Without an `llms.txt` file, AI models scrape your site blindly. Providing this file guarantees they read your most critical messaging, pricing, and documentation without guessing.
+- **Why it matters:** AI models increasingly rely on Retrieval-Augmented Generation (RAG) rather than just crawling HTML. Without an `llms.txt` file, they have to guess what content is most important, which can lead to hallucinations about your brand's pricing, features, or messaging.
 - **Recommendation for your Web Team:** [Provide a simple recommendation, e.g., "Create a markdown file at `/llms.txt` containing a 2-paragraph summary of your value prop and links to your 3 most important pages."]
 
 ## 2. Agent Interactivity (WebMCP)
 - **Status:** [Found / Not Found]
-- **Why it matters:** WebMCP allows AI to natively perform actions on your site (like searching a catalog). If absent, you lose potential conversions from users who prefer AI-driven workflows.
+- **Why it matters:** WebMCP is the new open standard from Google I/O 2026. It allows AI to natively perform actions on your site (like searching a catalog or booking a demo). If absent, you lose potential conversions from users who prefer AI-driven workflows and rely entirely on manual navigation.
 - **Recommendation for your Web Team:** [Provide a basic suggestion on what tools they might expose, e.g., "Explore implementing a WebMCP endpoint at `/.well-known/mcp` to expose your product catalog directly to AI agents."]
 
 ## 3. Semantic Clarity
 - **Status:** [Good / Needs Improvement]
-- **Why it matters:** Clean code is the fallback for AI understanding. If your site relies heavily on complex JavaScript without semantic tags, AI scrapers will struggle to summarize your brand accurately.
-- **Recommendation for your Web Team:** [Specific fix based on the audit, e.g., "Ensure core content is available in the initial HTML load, not just rendered client-side, and implement basic Schema.org JSON-LD."]
+- **Why it matters:** Clean semantic code is the critical fallback for basic AI scrapers. If your site relies heavily on complex JavaScript without semantic tags or Schema.org JSON-LD, automated systems will struggle to summarize your brand accurately.
+- **Recommendation for your Web Team:** [Specific fix based on the audit, e.g., "Ensure core content is available in the initial HTML load and implement basic Schema.org JSON-LD for your primary entity."]
 
 ---
-**Next Steps:** Hand these recommendations to your engineering or CMS team (Webflow, WordPress, etc.) to immediately boost your visibility in the Agentic Era.
+**Next Steps:** Would you like me to generate a draft of your `llms.txt` file or outline the specific JSON schemas your WebMCP server should expose? Let me know!
 ```
